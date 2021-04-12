@@ -52,16 +52,16 @@ class Quiz {
     //write condition to check if contestantInfor is not undefined
 
     if(allContestants !== undefined){
-      var display_position = 250;
+      var display_position = 280;
       for(var plr in allContestants){
-        var correctAns = 2;
-        if (plr === "contestant" + contestant.index || correctAns === 2)
-          fill("green")
+        var correctAns = "2";
+        if (correctAns === allContestants[plr].answer)
+          fill("Green");
         else 
           fill("red");
           display_position+=20;
           textSize(15);
-          text(allContestants[plr].name + "  ==> " + allContestants[plr].answer, 120,display_position)
+          text(allContestants[plr].name + "  ==> " + allContestants[plr].answer, 140,display_position)
       }
     }
 
@@ -69,7 +69,7 @@ class Quiz {
 
     fill(0,0,255);
     textSize(20);
-    text("Note: Contestant who answered correct are highlighted in green colour!",130,230);
+    text("Note: Contestant who answered correct are highlighted in green colour!",100,250);
 
     //write code to highlight contest who answered correctly
     
